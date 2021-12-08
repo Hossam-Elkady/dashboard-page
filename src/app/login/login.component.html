@@ -1,0 +1,41 @@
+<div class="container">
+    <h1 class="mt-5 ">login</h1>
+    <form [formGroup]="signinForm" class="pb-5" (ngSubmit)="submitLoginFormGroup()">
+        <div class="my-3">
+            <label class="my-2 text-warning">Email</label>
+            <input type="email" class="form-control" placeholder="Enter your Email" formControlName="email">
+            <div class="errors" *ngIf="signinForm.controls['email'].invalid && signinForm.controls['email'].touched">
+                <p class="text-warning my-2" *ngIf="signinForm.controls['email'].hasError('email')">enter valid email
+                </p>
+                <p class="text-warning my-2" *ngIf="signinForm.controls['email'].hasError('required')">email is required
+                </p>
+            </div>
+        </div>
+        <div class="my-3">
+            <label class="my-2 text-warning">Password</label>
+            <input type="password" class="form-control" placeholder="Enter your Password" formControlName="password">
+            <div class="errors"
+                *ngIf="signinForm.controls['password'].touched && signinForm.controls['password'].invalid">
+                <p class="text-warning my-2" *ngIf="signinForm.controls['password'].hasError('required')">Password is
+                    required
+                </p>
+                <p class="text-warning my-2" *ngIf="signinForm.controls['password'].hasError('minlength')">password
+                    minimum
+                    length is 5 </p>
+                <p class="text-warning my-2" *ngIf="signinForm.controls['password'].hasError('maxlength')">password
+                    maximum
+                    length is 20</p>
+            </div>
+        </div>
+        <button [disabled]="signinForm.invalid" class="submit btn btn-warning mt-3 text-white">Login</button>
+        <p class="text-warning mt-5 text-capitalize" *ngIf="error">{{error}}</p>
+    </form>
+    <div class="w-75 px-5 py-3 my-5 rounded-3 m-auto border">
+        <h3 class="text-center mb-3">For Testing</h3>
+        <div *ngFor="let user of users">
+            <p>{{user.email}}</p>
+            <p>{{user.password}}</p>
+            <hr>
+        </div>
+    </div>
+</div>

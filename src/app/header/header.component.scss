@@ -1,0 +1,16 @@
+.active {
+    background-color: #0f3263 !important;
+    box-shadow: 2px 2px 5px black;
+    border-radius: 10px;
+    color: white !important;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+a {
+    cursor: pointer;
+    color: black;
+    font-size: 18px;
+}

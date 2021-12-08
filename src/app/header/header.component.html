@@ -1,0 +1,16 @@
+<nav>
+    <ul class="nav nav-tabs justify-content-around">
+        <li class="nav-item py-3">
+            <a class="nav-link" routerLinkActive="active" routerLink="usera" aria-current="page">User A</a>
+        </li>
+        <li class="nav-item py-3">
+            <a class="nav-link" routerLinkActive="active" routerLink="userb">User B</a>
+        </li>
+        <li class="nav-item py-3">
+            <a class="nav-link" routerLinkActive="active" routerLink="userc">User C</a>
+        </li>
+        <li class="nav-item py-3" routerLink="userc">
+            <a class="nav-link" (click)="logout()">logout</a>
+        </li>
+    </ul>
+</nav>
