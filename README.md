@@ -1,5 +1,14 @@
 # LoginDashboard
 
+#### A simple Dashboard page with 3 tabs every tab has it's own guard which depends on User's Role if any User tried to open any other tab the guard will prevent him
+
+### Technologies Used
+
+##### HTML , CSS , TypeScript and Angular 13
+
+### Live Demo
+##### https://t-tech-dashboard.netlify.app
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.0.2.
 
 ## Development server
